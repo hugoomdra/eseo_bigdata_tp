@@ -58,6 +58,7 @@ db.airbnb.find({
     "minimum_nights" : "4",
     "$or" : [{"cleaning_fee": 0}, {"cleaning_fee": {$exists : false}}]
 }, {
+    _id: 0,
     property_type : 1, 
     bedrooms : 1, 
     price : 1, 
