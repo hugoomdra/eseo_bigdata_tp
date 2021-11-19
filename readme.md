@@ -15,9 +15,9 @@ Vous pouvez retrouver dans ce repo l'intégralité des livrables.
 
 ### Mise en place du conteneur docker
 ```sh
-docker run --name eseo-bigdata #créer le conteneur docker
+docker run --name eseo-bigdata -d mongo #créer le conteneur docker
 docker exec -it eseo-bigdata bash #rentrer dans le conteneur docker
-mongo #utiliser le shell mongodb
+mongosh #utiliser le shell mongodb
 ```
 
 ## Utiles
