@@ -56,12 +56,11 @@ db.airbnb.find({
 db.airbnb.find({
     "address.market" : "Sydney",
     "minimum_nights" : "4",
-    "cleaning_fee": {$exists : false},
     "$or" : [{"cleaning_fee": 0}, {"cleaning_fee": {$exists : false}}]
 }, {
     property_type : 1, 
     bedrooms : 1, 
     price : 1, 
     "address.street" : 1 
-})
+}).count()
 ```
