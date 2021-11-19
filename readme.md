@@ -13,7 +13,12 @@ Vous pouvez retrouver dans ce repo l'intégralité des livrables.
 
 ## Installations
 
-- pas d'installation pour le moment.
+### Mise en place du conteneur docker
+```sh
+docker run --name eseo-bigdata #créer le conteneur docker
+docker exec -it eseo-bigdata bash #rentrer dans le conteneur docker
+mongo #utiliser le shell mongodb
+```
 
 ## Utiles
 
@@ -60,3 +65,20 @@ Compter le nombre de documents
 ```
 db.<nom_collection>.count()
 ```
+
+Insertion d'un document
+```
+db.<nom_collection>.insertOne(<document>)
+```
+
+Insertion de plusieurs documents
+```
+db.<nom_collection>.insertMany(<liste de couments>)
+```
+
+Insertion d'un seul ou plusieurs documents à la fois
+> Méthode non conseillé 
+```
+db.<nom_collection>.insert(<document ou liste de couments>)
+```
+
