@@ -10,9 +10,11 @@ Vous pouvez retrouver dans ce repo l'intégralité des livrables.
 
 ### TP (énoncé)
 - [TP1 énoncé](readme/files/TRIMANE-TP1.pdf)
+- TP2 énoncé : indisponible pour le moment.
 
 ### TP (compte rendu)
 - [Mon TP1](tp1/tp1.md)
+- [Mon TP2](tp2/tp2.md)
 
 ## Installations
 
