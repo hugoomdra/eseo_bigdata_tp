@@ -23,7 +23,7 @@ docker exec -it eseo-bigdata bash #rentrer dans le conteneur docker
 mongosh #utiliser le shell mongodb
 ```
 
-Importer le fichier Airbnb
+Importer le fichier Airbnb *(cf. tp2)*
 ```
 docker ps
 
