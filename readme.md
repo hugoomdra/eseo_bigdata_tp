@@ -145,4 +145,16 @@ db.trips.find({"$expr" : { "$eq" : [ "$end station id", "$start station id" ]}})
 - limit(<n>) : limiter le nombre de résultat à <n>
 - skip(<n>) : ne pas afficher les <n> premiers document du curseur
 - sort({"champ" : <n>}) : trier les resultats par ordre croissant (<n> = 1) ou décroissant (<n> = -1))
+- pretty() : permet de mettre en forme le résultat
+- count() : permet d'obtenir le nombre de document
 
+### Indexes
+
+Les indexes permettent d'optimiser le temps d'execution.
+
+> Si on interroge une collecton fréquemment en fonction d'un champ X, il est recommandé de créer un index sur le champ X.
+
+Création d'un index sur l'année de naissance dans un ordre croissant
+```
+db.<nom_collection>.createIndex({ "birth year" : 1})
+```
