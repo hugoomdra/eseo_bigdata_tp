@@ -38,8 +38,22 @@ db.airbnb.find({
  }).count()
 ```
 
-**5)** 
+**5)** Afficher le nombre de logements à Porto au Portugal, dont les hôtes ne demandent pas un dépôt de garantie et dont le wifi figure comme étant exactement le deuxième équipement listé.
 
+```
+db.airbnb.find({ 
+    "address.market" : "Porto",
+    "address.country" : "Portugal",
+    "amenities.1" : "Wifi", 
+    "security_deposit": {$exists : false}
+ }).count()
+```
 
+**6)** Afficher la liste des logements Airbnb à Sydney avec une restriction du nombre minimum de nuitées réservées égale à 4, et dont le service de nettoyage est gratuit. Pour chaque logement afficher uniquement le type du logement, le nombre de chambres, le prix et la rue.
 
-
+```
+db.airbnb.find({
+    "address.market" : "Sydney",
+    
+})
+```
