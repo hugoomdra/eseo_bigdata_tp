@@ -82,3 +82,67 @@ Insertion d'un seul ou plusieurs documents à la fois
 db.<nom_collection>.insert(<document ou liste de couments>)
 ```
 
+Mettre à jour des documents
+> il existe aussi updateOne
+```
+db.<nom_collection>.updateMany(<filtre>, <modification>)
+```
+
+Supprimer un document
+> il existe aussi deleteMany
+```
+db.<nom_collection>.deleteOne(<filtre>)
+```
+
+### Opérateurs
+
+**Opérateurs de comparaison**
+- $eq = equals to
+- $gt = greater than
+- $gte = greater than or equal
+- $ne = not equal to
+- $lt = less than
+- $lte = less than or equal
+
+Afficher les produits qui pèsent 500g ou moins
+```
+db.produits.find( {"poids" : {"$lte" : 500} } )
+```
+
+**Opérateurs logiques**
+
+- $and = et
+- $or = ou
+- $not = non
+- $nor = non ou
+```
+{"<operateur>" : [ { <condition1> }, <condition2> ] } 
+```
+
+Afficher les personnes dont l'âge est entre 20 et 45
+
+*solution 1*
+```
+db.personnes.find({"$and" : [{"age" : {"$gt" : 20 }}, {"age" : {"$lt" : 45 }}]})
+```
+
+*solution 2*
+- a noter .
+
+*solution 3, **la meilleurs***
+```
+db.personnes.find({"age" : { "$gt" : 20, "$lt" : 45 }})
+```
+
+**Opérateur expressif d'interrogation**
+> $ sur le champs permet de prendre la valeur et non pas comparé les clés
+```
+db.trips.find({"$expr" : { "$eq" : [ "$end station id", "$start station id" ]}})
+```
+
+### Méthodes
+
+- limit(<n>) : limiter le nombre de résultat à <n>
+- skip(<n>) : ne pas afficher les <n> premiers document du curseur
+- sort({"champ" : <n>}) : trier les resultats par ordre croissant (<n> = 1) ou décroissant (<n> = -1))
+
