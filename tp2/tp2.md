@@ -15,10 +15,21 @@ use tp2
 > https://docs.mongodb.com/manual/reference/operator/query/size/#-size
 
 ```
-db.airbnb.find({ amenities : {$size: 2 }}, {_id : 1, amenities : 1}).count()
+db.airbnb.find({ amenities : {$size: 2 }}).count()
 db.airbnb.find({ amenities : {$size: 2 }}, {_id : 1, amenities : 1})
 ```
 
+- **3** Afficher le nombre de logements en Espagne pouvant loger 4 personnes et dont l'identité du locataire est vérifiée
+
+```
+db.airbnb.find({ 
+    "host.host_identity_verified" : true,
+    "address.country" : "Spain",
+    "accommodates" : {$gte : 4} 
+ }).count()
+```
+
+**4** Afficher le nombre de logements en Turquie ayant un ascenseur 
 
 
 
