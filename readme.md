@@ -1,24 +1,62 @@
 <p align="center"><img src="readme/images/eseo_logo.png" width="400"></p>
 
-# TD ESEO J2E
+# TP ESEO MongoDB
 
-Dans le cadre de la matière *ARCHITECTURE ET PLATEFORME WEB* de notre cursus Ingénieur (Semestre 9), nous avons du réaliser des TD/TP.
+Dans le cadre de la matière *Ingénieur Big Data* de notre cursus Ingénieur (Semestre 9), nous avons du réaliser des TD/TP.
 Vous pouvez retrouver dans ce repo l'intégralité des livrables.
 
 ## Fichiers 
-> Attention, les TD/TP sont la propriété intellectuelles de l'eseo. Il est interdit de les diffuser ou de les commercialiser.
+> Attention, les Cours/TD/TP sont la propriété intellectuelles de l'eseo. Il est interdit de les diffuser ou de les commercialiser.
 
-- TD1 : [Lien vers le TD1](readme/files/td1.pdf)
-- TD2 : [Lien vers le TD2](readme/files/td2.pdf)
+- pas de fichier pour le moment.
 
 
 ## Installations
 
-Pour le bon fonctionnement des TD/TP, il faut installer [Tomcat](https://tomcat.apache.org/download-90.cgi).
+- pas d'installation pour le moment.
 
 ## Utiles
 
-Voici la commande pour inclure la librairie *JSTL Core* :
+### Quelques commandes
+
+Afficher la liste de toutes les bases de données
 ```
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+show dbs
+```
+
+Changer de base de données
+```
+use <nom_base_de_données>
+```
+
+Vérifier si on est bien dans une base de données
+```
+db <nom_base_de_données>
+```
+
+Afficher toutes les collections d'une base de données
+```
+show collections
+```
+
+Afficher tous les documents d'une collection
+```
+db.<nom_collection>.find()
+db.getCollection("<nom_collection>").find()
+```
+
+La méthode **pretty** permet de mettre en forme le résultat
+```
+db.<nom_collection>.find().pretty()
+db.getCollection("<nom_collection>").find().pretty()
+```
+
+Afficher le premier élément d'une collection
+```
+db.<nom_collection>.findOne()
+```
+
+Compter le nombre de documents
+```
+db.<nom_collection>.count()
 ```
