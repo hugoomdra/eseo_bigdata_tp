@@ -14,8 +14,6 @@ Vous pouvez retrouver dans ce repo l'intégralité des livrables.
 ### TP (compte rendu)
 - [Mon TP1](tp1/tp1.md)
 
-
-
 ## Installations
 
 ### Mise en place du conteneur docker
@@ -23,6 +21,16 @@ Vous pouvez retrouver dans ce repo l'intégralité des livrables.
 docker run --name eseo-bigdata -d mongo #créer le conteneur docker
 docker exec -it eseo-bigdata bash #rentrer dans le conteneur docker
 mongosh #utiliser le shell mongodb
+```
+
+Importer le fichier Airbnb
+```
+docker ps
+
+docker cp collectionTP2_Airbnb.json <conteneur_id>:/collectionTP2_Airbnb.json
+
+docker cp readme/files/collectionTP2_Airbnb.json 20aa56300d16:/collectionTP2_Airbnb.json
+mongoimport --db tp2 --collection airbnb --file collectionTP2_Airbnb.json
 ```
 
 ## Utiles
