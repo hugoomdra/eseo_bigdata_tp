@@ -22,7 +22,7 @@ caractérisée par son nom, âge, sexe, adresse (décomposée en ville et code p
 d’intérêts (une personne peut avoir un ou plusieurs centres d’intérêts).
 
 *Schéma de la colletion personne*
-```json
+```
 {
     "nom":"",
     "age":"",
@@ -41,7 +41,7 @@ d’intérêts (une personne peut avoir un ou plusieurs centres d’intérêts).
 - **3.1)** Pour commencer, insérer un document correspondant à madame DUBOIS, qui a 25 ans, habite
 au 2éme arrondissement de paris, et aime le cinéma et la musique.
 
-```json
+```
 db.personnes.insertOne({
     "nom":"DUBOIS",
     "age":25,
@@ -72,7 +72,7 @@ On peut remarquer qu'un champ **_id** a été ajouté par défaut avec une valeu
 
 **4)** Ajouter avec la même commande, les 4 personnes suivantes.
 
-```json
+```
 db.personnes.insertMany([{
     "_id": 1,
     "nom":"THOMAS",
@@ -131,7 +131,7 @@ db.personnes.insertMany([{
 
 **5)** Afficher le document correspondant à la personne ayant 38 ans
 
-```json
+```
 db.personnes.find({
     "age" : {"$eq" : 38} 
 })
@@ -139,14 +139,14 @@ db.personnes.find({
 
 **6)** Afficher les personnes habitant à Paris
 
-```json
+```
 db.personnes.find({
     "adresse.ville" : "Paris"} 
 })
 ```
 
 **7)** Afficher toutes les femmes qui habitent à Paris
-```json
+```
 db.personnes.find({
     "adresse.ville" : "Paris",
     "sexe" : "femme"
@@ -179,7 +179,7 @@ db.personnes.find({
 
 **10)** Insérer le document suivant `{"_id" : 1, "nom" : "TOTO"}` dans la collection et expliquez le résultat.
 
-```json
+```
 db.personnes.insertOne({
     "_id" : 1, 
     "nom" : "TOTO"
