@@ -19,7 +19,7 @@ db.airbnb.find({ amenities : {$size: 2 }}).count()
 db.airbnb.find({ amenities : {$size: 2 }}, {_id : 1, amenities : 1})
 ```
 
-- **3** Afficher le nombre de logements en Espagne pouvant loger 4 personnes et dont l'identité du locataire est vérifiée
+- **3)** Afficher le nombre de logements en Espagne pouvant loger 4 personnes et dont l'identité du locataire est vérifiée
 
 ```
 db.airbnb.find({ 
@@ -29,8 +29,16 @@ db.airbnb.find({
  }).count()
 ```
 
-**4** Afficher le nombre de logements en Turquie ayant un ascenseur 
+**4)** Afficher le nombre de logements en Turquie ayant un ascenseur
 
+```
+db.airbnb.find({
+    "address.country" : "Turkey",
+    "amenities" : 'Elevator'
+ }).count()
+```
+
+**5)** 
 
 
 
