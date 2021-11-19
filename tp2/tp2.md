@@ -39,13 +39,14 @@ db.airbnb.find({
 ```
 
 **5)** Afficher le nombre de logements à Porto au Portugal, dont les hôtes ne demandent pas un dépôt de garantie et dont le wifi figure comme étant exactement le deuxième équipement listé.
+> Attention, en NOSql, il faut prendre en considération TOUS les cas possible.
 
 ```
 db.airbnb.find({ 
     "address.market" : "Porto",
     "address.country" : "Portugal",
     "amenities.1" : "Wifi", 
-    "security_deposit": {$exists : false}
+    "$or" : [{"security_deposit": 0}, {"security_deposit": {$exists : false}}]
  }).count()
 ```
 
@@ -54,6 +55,13 @@ db.airbnb.find({
 ```
 db.airbnb.find({
     "address.market" : "Sydney",
-    
+    "minimum_nights" : "4",
+    "cleaning_fee": {$exists : false},
+    "$or" : [{"cleaning_fee": 0}, {"cleaning_fee": {$exists : false}}]
+}, {
+    property_type : 1, 
+    bedrooms : 1, 
+    price : 1, 
+    "address.street" : 1 
 })
 ```
