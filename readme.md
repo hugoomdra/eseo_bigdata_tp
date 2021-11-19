@@ -30,6 +30,7 @@ docker ps
 docker cp collectionTP2_Airbnb.json <conteneur_id>:/collectionTP2_Airbnb.json
 
 docker cp readme/files/collectionTP2_Airbnb.json 20aa56300d16:/collectionTP2_Airbnb.json
+
 mongoimport --db tp2 --collection airbnb --file collectionTP2_Airbnb.json
 ```
 
