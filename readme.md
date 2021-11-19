@@ -78,7 +78,7 @@ db.<nom_collection>.insertOne(<document>)
 
 Insertion de plusieurs documents
 ```
-db.<nom_collection>.insertMany(<liste de couments>)
+db.<nom_collection>.insertMany(<liste de documents>)
 ```
 
 Insertion d'un seul ou plusieurs documents à la fois

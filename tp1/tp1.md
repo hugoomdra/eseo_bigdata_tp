@@ -187,7 +187,7 @@ db.personnes.insertOne({
     "nom" : "TOTO"
     })
 ```
-Impossible de l'insérer car la collection possède déjà un document avec qui a l'id 1.
+Impossible de l'insérer car la collection possède déjà un document qui a l'id 1.
 
 *Log erreur*
 > **MongoServerError**: E11000 duplicate key error collection: tp1.personnes index: _id_ dup key: { _id: 1 }
