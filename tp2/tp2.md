@@ -68,6 +68,6 @@ db.airbnb.find({
 
 **BONUS :** Renommer le champ *name* à *ad_title* pour tous les documents. 
 
-````
+```
 db.airbnb.updateMany({}, { $rename: { 'name': 'ad_title'} } )
 ```
