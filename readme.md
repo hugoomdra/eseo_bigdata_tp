@@ -8,6 +8,11 @@ Vous pouvez retrouver dans ce repo l'intégralité des livrables.
 ## Fichiers 
 > Attention, les Cours/TD/TP sont la propriété intellectuelles de l'eseo. Il est interdit de les diffuser ou de les commercialiser.
 
+### Cours 
+
+- [Cours 1](readme/files/Cours-1.pdf)
+- [Cours 2](readme/files/Cours-2.pdf)
+
 ### TP (énoncé)
 - [TP1 énoncé](readme/files/TRIMANE-TP1.pdf)
 - TP2 énoncé : indisponible pour le moment.
