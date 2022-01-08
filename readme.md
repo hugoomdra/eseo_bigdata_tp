@@ -10,8 +10,8 @@ Vous pouvez retrouver dans ce repo l'intégralité des livrables.
 
 ### Cours 
 
-- [Cours 1](readme/files/Cours-1.pdf)
-- [Cours 2](readme/files/Cours-2.pdf)
+- [Cours 1](readme/files/cours-1.pdf)
+- [Cours 2](readme/files/cours-2.pdf)
 
 ### TP (énoncé)
 - [TP1 énoncé](readme/files/TRIMANE-TP1.pdf)
