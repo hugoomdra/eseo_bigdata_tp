@@ -21,6 +21,10 @@ Vous pouvez retrouver dans ce repo l'intégralité des livrables.
 - [Mon TP1](tp1/tp1.md)
 - [Mon TP2](tp2/tp2.md)
 
+### Ressources 
+
+- [Entrainement avec une collection de restaurants](https://www.w3resource.com/mongodb-exercises/#PracticeOnline)
+
 ## Installations
 
 ### Mise en place du conteneur docker
