@@ -71,3 +71,64 @@ db.airbnb.find({
 ```
 db.airbnb.updateMany({}, { $rename: { 'name': 'ad_title'} } )
 ```
+
+-- Problème de chiffre
+
+**11)** Intitulé sur le TP2
+```
+db.airbnb.find({ "$or": [
+    {"ad_title": "STUDIO COPACABANA VISTA MAR"}, 
+    {"ad_title":"Bachelor for a perfect time in Montréal"},
+    { "ad_title": "Private Room in Bushwick" }
+    ]},
+    {
+        "ad_title": 1, 
+        "property_type": 1,
+        "last_review": 1,
+        "price": 1
+    }).sort({"last_review" : -1})
+```
+
+**12)** Intitulé sur le TP2
+```
+db.airbnb.updateMany({
+    "host.host_identity_verified" : true,
+    "address.country" : "Spain",
+    "accommodates" : {$gte : 4},
+    "last_review" : {
+        "$lte": ISODate("2019-02-15 00:00:00.000Z")
+    },
+}, 
+{
+    $set: {
+        "last_review": ISODate("2019-02-15 00:00:00.000Z")
+    }
+})
+```
+
+**15)** Intitulé sur le TP2
+```
+db.societes.find({
+            founded_year: null,
+            founded_month: null,
+            founded_day: null
+}).sort({
+            founded_year: 1,
+            founded_month: 1,
+            founded_day: 1}).limit(1)
+            })
+```
+
+```
+db.societes.find(
+    $or: [
+        {category_code: "social"}
+        {category_code: "web"},
+    ]}),
+    {$or: [
+        {founded_month: 10}
+        {founded_year: 2004}, 
+    ],
+```
+
+
